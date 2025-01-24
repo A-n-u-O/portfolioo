@@ -1,0 +1,13 @@
+nav {
+    background-color: #11285D; /* Deep blue */
+    color: white; /* Text color for navbar */
+  }
+  
+  a {
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #F2A365; /* Yellow for hover */
+  }
+  
