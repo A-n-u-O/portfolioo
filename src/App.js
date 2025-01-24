@@ -1,4 +1,5 @@
 import React from "react";
+import './App.css'
 import Navbar from "./Components/Navbar";
 import Contact from "./Components/Contact";
 import About from "./Components/About";
@@ -11,13 +12,11 @@ function App() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="hero py-20 bg-gradient-to-b from-yellow-100 to-white text-center">
+      <section className="hero py-20  text-center">
         <div className="container mx-auto">
-          <h1 className="text-4xl font-bold text-gray-800">I'M ANUOLUWAPO</h1>
-          <p className="text-xl text-gray-700 mt-4">
-            A Front-end Developer
-          </p>
-          <button className="mt-6 px-6 py-3 bg-yellow-500 text-white font-bold rounded-full hover:bg-yellow-600">
+          <h1 className="text-4xl font-bold text-white">I'M ANUOLUWAPO</h1>
+          <p className="text-xl text-gray-200 mt-4">A Front-end Developer</p>
+          <button className="mt-6 px-6 py-3 bg-yellow-400 text-gray-800 font-bold rounded-full hover:bg-yellow-500">
             Hire Me
           </button>
         </div>

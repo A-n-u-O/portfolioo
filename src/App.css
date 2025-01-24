@@ -1,0 +1,24 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+section {
+  background: linear-gradient(135deg, #ffaf7b, #d76d77);
+  color: #fff;
+}
+
+h2 {
+  color: #ffd700;
+}

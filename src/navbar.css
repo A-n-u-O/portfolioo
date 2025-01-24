@@ -1,13 +1,22 @@
+/* navbar.css */
 nav {
-    background-color: #11285D; /* Deep blue */
-    color: white; /* Text color for navbar */
-  }
-  
-  a {
-    transition: color 0.3s ease;
+    background: linear-gradient(90deg, #3A1C71, #D76D77, #FFAF7B); 
+    color: white;
   }
   
   a:hover {
-    color: #F2A365; /* Yellow for hover */
+    color: #FFD700; /* Gold for hover effects */
+  }
+  
+  /* Buttons */
+  button {
+    background-color: #FFAF7B; 
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #D76D77; /* Secondary color for hover */
   }
   
