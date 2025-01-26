@@ -1,9 +1,10 @@
+import { motion } from "framer-motion";
 import React from "react";
 const Contact = () => {
   return (
     <section id="contact" className="contact py-20 text-center bg-gray-100">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900 mb-5">Get in Touch</h2>
+        <motion.h2 animate={{}} className="text-3xl font-bold text-gray-900 mb-5">Get in Touch</motion.h2>
         <p className="text-lg text-gray-700 mb-10">
           Feel free to reach out to discuss new projects or opportunities.
         </p>
