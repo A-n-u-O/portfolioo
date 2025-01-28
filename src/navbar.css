@@ -1,22 +1,31 @@
-/* navbar.css */
-nav {
-    background: linear-gradient(90deg, #3A1C71, #D76D77, #FFAF7B); 
-    color: white;
-  }
-  
-  a:hover {
-    color: #FFD700; /* Gold for hover effects */
-  }
-  
-  /* Buttons */
-  button {
-    background-color: #FFAF7B; 
-    color: white;
-    border: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #D76D77; /* Secondary color for hover */
-  }
-  
+/* Navbar */
+.navbar {
+  position: relative;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: linear-gradient(90deg, #3a1c71, #d76d77, #ffaf7b);
+  color: white;
+  transition: position 0.3s, top 0.3s;
+}
+
+.navbar.fixed {
+  position: fixed;
+  top: 0;
+}
+
+a:hover {
+  color: #FFD700; /* Gold for hover effects */
+}
+
+/* Buttons */
+button {
+  background-color: #FFAF7B;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #D76D77; /* Secondary color for hover */
+}

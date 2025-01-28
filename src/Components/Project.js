@@ -6,12 +6,13 @@ const Project = ({ projects }) => {
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-gray-900 mb-10">Projects i have worked on </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {projects?.map((project, index) => (
             <a
               key={index}
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`Visit my ${project.alt}`}
               className="project-card bg-gray-100 p-5 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
               <img
                 src={project.image}

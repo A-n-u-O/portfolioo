@@ -16,8 +16,8 @@ const Skills = () => {
     <section id="skills" className="py-20 text-center">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-gray-900 mb-10">My Skills</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mx-auto max-w-96">
-          {skills.map((skill, index) => (
+        <div className="flex flex-wrap justify-center gap-x-8 gap-y-6 mx-auto max-w-7xl">
+          {skills?.map((skill, index) => (
             <motion.div
               key={index}
               whileHover={{ scale: 1.1 }}

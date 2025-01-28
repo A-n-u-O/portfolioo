@@ -1,44 +1,81 @@
+import React, { useState } from "react";
+import "../contact.css";
 import { motion } from "framer-motion";
-import React from "react";
+import emailjs from "emailjs-com";
+
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        "service_l52lsn8", // your Service ID
+        "template_dq3sdfn", // your Template ID
+        {
+          from_name: formData.name,
+          reply_to: formData.email,
+          message: formData.message,
+        },
+        "WV_RNMjUVVb3TJXMy" // your User ID or public key
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          alert("Your message has been sent!");
+          setFormData({ name: "", email: "", message: "" });
+        },
+        (err) => {
+          console.error("FAILED...", err);
+          alert("Failed to send the message. Please try again.");
+        }
+      );
+  };
+
   return (
-    <section id="contact" className="contact py-20 text-center bg-gray-100">
-      <div className="container mx-auto">
-        <motion.h2 animate={{}} className="text-3xl font-bold text-gray-900 mb-5">Get in Touch</motion.h2>
-        <p className="text-lg text-gray-700 mb-10">
-          Feel free to reach out to discuss new projects or opportunities.
-        </p>
-        <form className="max-w-md mx-auto">
-          <div className="flex flex-col mb-4">
-            <input
-              type="text"
-              placeholder="Name"
-              className="p-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-yellow-500"
-            />
-          </div>
-          <div className="flex flex-col mb-4">
-            <input
-              type="email"
-              placeholder="Email"
-              className="p-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-yellow-500"
-            />
-          </div>
-          <div className="flex flex-col mb-4">
-            <input
-              type="text"
-              placeholder="Subject"
-              className="p-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-yellow-500"
-            />
-          </div>
-          <div className="flex flex-col mb-4">
-            <textarea
-              placeholder="Message"
-              rows="5"
-              className="p-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-yellow-500"></textarea>
-          </div>
+    <section id="contact" className="py-20 bg-gray-100">
+      <div className="container mx-auto text-center">
+      <motion.h2 whileInView={{scale: [1,2,1.5], y:[0,30,-30,0]}} className="text-3xl font-bold text-gray-900 mb-5">Get in Touch</motion.h2>
+        <form className="max-w-md mx-auto space-y-4" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Your Name"
+            required
+            className="w-full p-3 border rounded text-black"
+          />
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Your Email"
+            required
+            className="w-full p-3 border rounded text-black"
+          />
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            placeholder="Your Message"
+            rows="6"
+            required
+            className="w-full p-3 border rounded text-black"></textarea>
           <button
             type="submit"
-            className="px-6 py-3 bg-yellow-500 text-white font-bold rounded-full hover:bg-yellow-600">
+            className="bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600">
             Send Message
           </button>
         </form>
@@ -46,4 +83,5 @@ const Contact = () => {
     </section>
   );
 };
+
 export default Contact;

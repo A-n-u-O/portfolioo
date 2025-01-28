@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import Navbar from "./Components/Navbar";
 import Contact from "./Components/Contact";
 import About from "./Components/About";
@@ -8,6 +8,28 @@ import Project from "./Components/Project";
 import Skills from "./Components/Skills";
 
 function App() {
+  const [IsFixed, setIsFixed] = useState();
+  const { scrollYProgress } = useScroll();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsFixed(true);
+      } else {
+        setIsFixed(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    scrollYProgress.onChange((progress) => {
+      console.log("Scroll progress:", progress); // Debugging log
+    });
+  }, [scrollYProgress]);
+  
   const menuItems = [
     { label: "About", href: "#about" },
     { label: "Skills", href: "#skills" },
@@ -86,52 +108,62 @@ function App() {
   ];
 
   return (
-    <div>
-      {/* Navbar */}
-      <Navbar
-        logoSrc="/assets/images/logo.png"
-        title="My Portfolio"
-        menuItems={menuItems}
-      />
+    <>
+      <div>
+        {/* Navbar */}
+        <Navbar
+          logoSrc="/assets/images/logo.png"
+          menuItems={menuItems}
+          className={`navbar ${IsFixed ? "fixed" : ""}`}
+        />
+        <motion.div
+          className="scroll-progress-bar"
+          style={{ transform: `scaleX(${scrollYProgress})` }}></motion.div>
 
-      {/* Hero Section */}
-      <section className="hero py-20 text-center">
-        <div className="container mx-auto">
-          <h1 className="text-4xl font-bold text-white">ANUOLUWAPO</h1>
-          <p className="text-xl text-gray-200 mt-4">Front-end Developer</p>
-          <motion.div className=" mt-4">
-            {socialIcons.map((icon, index) => (
-              <a href={icon.link} target="_blank" rel="noopener noreferrer">
-                <motion.button
+        {/* Hero Section */}
+        <section className="hero py-20 text-center h-96">
+          <div className="container mx-auto">
+            <h1 className="text-4xl font-bold text-white">ANUOLUWAPO</h1>
+            <p className="text-xl text-gray-200 mt-4">Front-end Developer</p>
+            <motion.div className=" mt-4">
+              {socialIcons?.map((icon, index) => (
+                <a
+                  href={icon.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   key={index}
-                  whileHover={{ scale: 1.2 }}
-                  className="mx-2 rounded-xl p-4">
-                  <img src={icon.src} alt={icon.alt} className="w-8 h-8" />
-                </motion.button>
-              </a>
-            ))}
-          </motion.div>
+                  aria-label={`Visit my ${icon.alt}`}>
+                  <motion.button
+                    whileHover={{ scale: 1.2 }}
+                    className="mx-2 rounded-xl p-4">
+                    <img
+                      src={icon.src}
+                      alt={icon.alt}
+                      className="w-8 h-8"
+                      loading="lazy"
+                    />
+                  </motion.button>
+                </a>
+              ))}
+            </motion.div>
 
-          {/* <motion.button
-            whileHover={{ scale: 1.2 }}
-            className="mt-6 px-6 py-3 bg-yellow-400 text-gray-800 font-bold rounded-full hover:bg-yellow-500">
-            Hire Me
-          </motion.button> */}
-        </div>
-      </section>
-
-      {/* About Section */}
-      <About />
-
-      {/* Skills Section */}
-     <Skills/>
-
-      {/* Projects Section */}
-      <Project projects={projects} />
-
-      {/* Contact Section */}
-      <Contact />
-    </div>
+            {/* <motion.button
+          whileHover={{ scale: 1.2 }}
+          className="mt-6 px-6 py-3 bg-yellow-400 text-gray-800 font-bold rounded-full hover:bg-yellow-500">
+          Hire Me
+        </motion.button> */}
+          </div>
+        </section>
+        {/* About Section */}
+        <About />
+        {/* Skills Section */}
+        <Skills />
+        {/* Projects Section */}
+        <Project projects={projects} />
+        {/* Contact Section */}
+        <Contact />
+      </div>
+    </>
   );
 }
 
