@@ -1,13 +1,30 @@
 import React from "react";
+import { motion } from "framer-motion";
+import "../project.css";
 
 const Project = ({ projects }) => {
   return (
     <section id="projects" className="projects py-20 text-center">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900 mb-10">Projects i have worked on </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <h2 className="text-3xl font-bold text-gray-900 mb-10">
+          Projects i have worked on{" "}
+        </h2>
+        <motion.div
+          variants={{
+            hidden: { opacity: 0 },
+            show: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.25,
+              },
+            },
+          }}
+          initial="hidden"
+          whileInView="show"
+          className=" grid grid-cols-1 md:grid-cols-3 gap-8">
           {projects?.map((project, index) => (
-            <a
+            <motion.a
+              variants={{ hidden: { opacity: 0 }, show: { opacity: 1 } }}
               key={index}
               href={project.link}
               target="_blank"
@@ -22,12 +39,12 @@ const Project = ({ projects }) => {
               <h3 className="text-xl font-bold text-gray-800">
                 {project.title}
               </h3>
-              <p className="text-sm text-gray-600 mt-2">
+              <p className="text-sm text-gray-800 mt-2">
                 {project.description}
               </p>
-            </a>
+            </motion.a>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

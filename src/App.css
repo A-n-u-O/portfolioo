@@ -24,6 +24,16 @@ html, body {
   z-index: 1000;
 }
 
+.hero {
+  min-height: 100vh; /* Ensures it covers the full height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, #ffaf7b, #d76d77);
+  color: white;
+}
+
 .hero .container {
   width: 100%;
   max-width: 1200px;

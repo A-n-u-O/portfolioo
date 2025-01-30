@@ -1,4 +1,6 @@
 import React from "react";
+import "../about.css";
+
 const About = () => {
   return (
     <section id="about" className="about py-20 bg-gray-100 text-center">

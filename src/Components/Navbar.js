@@ -9,7 +9,7 @@ const Navbar = ({ logoSrc, menuItems, className }) => {
         {/* Dynamic Logo */}
         <motion.div
           animate={{ rotate: 360, scale: [0.5, 0.7, 1] }}
-          transition={{ duration: 2 }}
+          transition={{ duration: 3 }}
           className="flex items-center"
         >
           <img
