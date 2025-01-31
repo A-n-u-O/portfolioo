@@ -3,34 +3,54 @@ import "../about.css";
 
 const About = () => {
   return (
-    <section id="about" className="about py-20 px-20 bg-gray-100 flex flex-col md:flex-row items-center text-center md:text-left">
-      <div className="w-full h-full md:w-1/2 flex justify-center">
-        <img src="/assets/images/about.jpg" alt="About Me" className="w-100 h-100 rounded-lg shadow-lg" />
+    <section 
+      id="about" 
+      className="about py-16 px-8 md:px-16 bg-gray-100 flex flex-col md:flex-row items-center text-left"
+    >
+      {/* Image Section */}
+      <div className="w-full md:w-1/2 flex justify-center md:justify-start mb-6 md:mb-0">
+        <img 
+          src="/assets/images/about.jpg" 
+          alt="About Me" 
+          className="w-72 h-auto md:w-96 rounded-lg shadow-lg"
+        />
       </div>
-      <div className="w-full md:w-1/2 px-6 md:px-12">
-        <h2 className="text-3xl font-bold text-gray-900 mb-5">About Me</h2>
-        <p className="text-lg text-gray-700 max-w-xl">
-          I’m Anuoluwapo, a results-driven web developer based in Lagos, Nigeria, with over three years of experience crafting seamless and visually compelling digital experiences. My expertise lies in building modern, responsive, and user-friendly web applications using cutting-edge technologies like <strong>React.js, TypeScript, and Tailwind CSS</strong>.
+
+      {/* Content Section */}
+      <div className="w-full md:w-1/2 px-4 md:px-8">
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">About Me</h2>
+        <p className="text-lg text-gray-700 leading-relaxed">
+          Hello! I’m Anuoluwapo, a Frontend Developer based in Lagos, Nigeria. 
+          I specialize in crafting engaging, user-friendly, and high-performance web applications 
+          using React.js, TypeScript, and Tailwind CSS.
         </p>
-        <p className="text-lg text-gray-700 max-w-xl mt-4">
-          Beyond writing clean and efficient code, I’m passionate about delivering solutions that are not only functional but also intuitive and engaging. I have successfully completed <strong>10+ projects</strong>, ranging from <strong>dynamic web applications</strong> to <strong>interactive UI components</strong>, ensuring performance, accessibility, and scalability.
+        <p className="text-lg text-gray-700 leading-relaxed mt-3">
+          With 3+ years of experience, I have successfully developed interactive 
+          and responsive web solutions, focusing on clean code, UI/UX design principles, and seamless functionality.
         </p>
-        <p className="text-lg text-gray-700 max-w-xl mt-4">
-          In addition to development, I stay updated with the latest industry trends, continuously improving my skills in <strong>frontend frameworks, API integration, and deployment strategies</strong>. Whether collaborating with teams or working independently, I am committed to delivering excellence, maintaining best practices, and ensuring high-quality user experiences.
+        <p className="text-lg text-gray-700 leading-relaxed mt-3">
+          I’m passionate about turning ideas into reality, keeping up with modern web technologies, 
+          and collaborating on impactful projects. Let’s build something amazing together!
         </p>
-        <div className="flex justify-center md:justify-start mt-10">
-          <div className="mx-5">
-            <h3 className="text-xl font-bold">3+</h3>
-            <p>Years Experience</p>
+
+        {/* Experience & Projects Count */}
+        <div className="flex justify-start gap-8 mt-6">
+          <div className="text-center">
+            <h3 className="text-2xl font-bold text-gray-900">3+</h3>
+            <p className="text-gray-700 text-sm">Years of Experience</p>
           </div>
-          <div className="mx-5">
-            <h3 className="text-xl font-bold">10+</h3>
-            <p>Projects Completed</p>
+          <div className="text-center">
+            <h3 className="text-2xl font-bold text-gray-900">10+</h3>
+            <p className="text-gray-700 text-sm">Completed Projects</p>
           </div>
         </div>
-        <button className="mt-6 px-6 py-3 bg-yellow-500 text-white font-bold rounded-full hover:bg-yellow-600">
-          Download CV
-        </button>
+
+        {/* CTA Button */}
+        <div className="mt-6">
+          <button className="px-6 py-3 bg-yellow-500 text-white font-bold rounded-full hover:bg-yellow-600 transition">
+            Download CV
+          </button>
+        </div>
       </div>
     </section>
   );

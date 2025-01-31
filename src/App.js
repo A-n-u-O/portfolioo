@@ -15,48 +15,49 @@ const menuItems = [
 ];
 
 const projects = [
-  {
-    title: "Social App Project",
-    description: "Crafted UI for a cooking platform with smooth user experience.",
-    image: "/assets/images/social.png",
-    alt: "Social app",
-    link: "https://social-media-blue-theta.vercel.app/",
-  },
-  {
-    title: "Human Resources Management System",
-    description: "Developed an HRMS dashboard for efficient employee management.",
-    image: "/assets/images/hr.png",
-    alt: "HR management system",
-    link: "https://hrms-wine.vercel.app/",
-  },
-  {
-    title: "Todo app using react",
-    description: "a front-end coding challenge from frontendmentor!",
-    image: "/assets/images/todo.png",
-    alt: "Shipping app",
-    link: "https://todoapp-react-teal.vercel.app/",
-  },
-  {
-    title: "Attendance Logging App",
-    description: "Designed a logging system for attendance tracking.",
-    image: "/assets/images/attendance.png",
-    alt: "Attendance app",
-    link: "https://attendance-logging-app.vercel.app/",
-  },
-  {
-    title: "E-commerce Product Page",
-    description: "A fully responsive product page UI based on a Frontend Mentor challenge.",
-    image: "/assets/images/product.png",
-    alt: "E-commerce product page",
-    link: "https://e-commerce-page-two-tau.vercel.app/",
-  },
-  {
-    title: "First Portfolio",
-    description: "My first portfolio website showcasing projects and skills.",
-    image: "/assets/images/old-portfolio.png",
-    alt: "Portfolio Project",
-    link: "https://a-n-u-o-github-io.vercel.app/",
-  },
+    {
+      "title": "Social App Project",
+      "description": "Developed a dynamic social media platform with a visually appealing UI, enabling seamless interactions, user authentication, and real-time updates for an engaging community experience.",
+      "image": "/assets/images/social.png",
+      "alt": "Social app",
+      "link": "https://social-media-blue-theta.vercel.app/"
+    },
+    {
+      "title": "Human Resources Management System",
+      "description": "Built a feature-rich HRMS dashboard for streamlined employee management, incorporating role-based access control, attendance tracking, and payroll integration for organizational efficiency.",
+      "image": "/assets/images/hr.png",
+      "alt": "HR management system",
+      "link": "https://hrms-wine.vercel.app/"
+    },
+    {
+      "title": "Todo App Using React",
+      "description": "Designed and implemented a user-friendly to-do application as part of a Frontend Mentor challenge, featuring task addition, filtering, and drag-and-drop reordering for improved productivity.",
+      "image": "/assets/images/todo.png",
+      "alt": "Todo app",
+      "link": "https://todoapp-react-teal.vercel.app/"
+    },
+    {
+      "title": "Attendance Logging App",
+      "description": "Created an efficient attendance tracking system with a simple and intuitive UI, allowing organizations to log, monitor, and analyze employee attendance data in real time.",
+      "image": "/assets/images/attendance.png",
+      "alt": "Attendance app",
+      "link": "https://attendance-logging-app.vercel.app/"
+    },
+    {
+      "title": "E-commerce Product Page",
+      "description": "Developed a fully responsive and interactive product page, showcasing dynamic image previews, quantity selection, and an optimized shopping experience inspired by a Frontend Mentor challenge.",
+      "image": "/assets/images/product.png",
+      "alt": "E-commerce product page",
+      "link": "https://e-commerce-page-two-tau.vercel.app/"
+    },
+    {
+      "title": "First Portfolio",
+      "description": "Designed and deployed my first personal portfolio website to showcase my web development projects, skills, and experience, featuring a clean layout and smooth navigation.",
+      "image": "/assets/images/old-portfolio.png",
+      "alt": "Portfolio Project",
+      "link": "https://a-n-u-o-github-io.vercel.app/"
+    }
+  
 ];
 
 const socialIcons = [
