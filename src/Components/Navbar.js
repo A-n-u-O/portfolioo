@@ -25,21 +25,21 @@ const Navbar = ({ logoSrc, menuItems, className }) => {
           className="md:hidden text-white focus:outline-none z-50"
           onClick={() => setIsOpen(!isOpen)}>
           <img
-            src={
-              isOpen ? "/assets/icons/cancel.svg" : "/assets/icons/nav-icon.svg"
-            }
+            src={isOpen ? "/assets/icons/cancel.svg" : "/assets/icons/nav-icon.svg"}
             alt="Menu"
             className="w-8 h-8"
           />
         </button>
 
-        {/* Navigation Links */}
+        {/* Navigation Links (Desktop & Mobile) */}
         <ul
-          className={`absolute md:relative top-full left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none flex flex-col md:flex-row items-center text-center transition-all duration-300 ease-in-out ${
+          className={`absolute md:relative top-full right-0 md:right-auto md:left-auto w-3/4 md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none flex flex-col md:flex-row items-center text-center transition-all duration-300 ease-in-out ${
             isOpen ? "block" : "hidden md:flex"
           }`}>
           {menuItems?.map((item, index) => (
-            <li key={index} className="py-3 mx-3 md:py-0 w-full">
+            <li
+              key={index}
+              className="py-3 mx-3 md:py-0 w-full border-b md:border-none border-gray-300">
               <a
                 href={item.href}
                 className="text-gray-800 hover:text-yellow-600 transition-colors block px-6 md:px-4 py-2"

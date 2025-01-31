@@ -39,23 +39,33 @@ button:hover {
 }
 
 /* Mobile Navigation */
-@media (max-width: 768px) {
+@media (max-width: 1024px) { /* Applies to tablets and smaller */
   .navbar ul {
     position: absolute;
     top: 60px;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%; /* Slightly larger width */
     background: white;
     text-align: center;
     display: none;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
   }
 
   .navbar ul.block {
     display: block;
+    animation: fadeIn 0.3s ease-in-out;
   }
 
   .navbar ul li {
-    padding: 10px 0;
+    padding: 12px 0;
+    border-bottom: 1px solid #ccc; /* Bottom border */
+  }
+
+  .navbar ul li:last-child {
+    border-bottom: none;
   }
 
   .navbar ul li a {
@@ -67,5 +77,17 @@ button:hover {
 
   .navbar ul li a:hover {
     color: #d76d77;
+  }
+
+  /* Fade-in Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
