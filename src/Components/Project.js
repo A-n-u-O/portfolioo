@@ -4,7 +4,7 @@ import "../project.css";
 
 const Project = ({ projects }) => {
   return (
-    <section id="projects" className="projects py-20 text-center">
+    <section id="projects" className="projects py-20 px-20 text-center">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-gray-900 mb-10">
           Projects i have worked on{" "}

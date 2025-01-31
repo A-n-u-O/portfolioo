@@ -43,7 +43,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-100">
+    <section id="contact" className="py-20 px-10 bg-gray-100">
       <div className="container mx-auto text-center">
       <motion.h2 whileInView={{scale: [1,2,1.5], y:[0,30,-30,0]}} className="text-3xl font-bold text-gray-900 mb-5">Get in Touch</motion.h2>
         <form className="max-w-md mx-auto space-y-4" onSubmit={handleSubmit}>

@@ -39,7 +39,7 @@ const Navbar = ({ logoSrc, menuItems, className }) => {
             isOpen ? "block" : "hidden md:flex"
           }`}>
           {menuItems?.map((item, index) => (
-            <li key={index} className="py-3 md:py-0 w-full">
+            <li key={index} className="py-3 mx-3 md:py-0 w-full">
               <a
                 href={item.href}
                 className="text-gray-800 hover:text-yellow-600 transition-colors block px-6 md:px-4 py-2"
