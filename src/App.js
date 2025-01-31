@@ -30,11 +30,11 @@ const projects = [
     link: "https://hrms-wine.vercel.app/",
   },
   {
-    title: "Shipping App",
-    description: "Built an intuitive shipment tracking system with a clean UI.",
-    image: "/assets/images/shipping.png",
+    title: "Todo app using react",
+    description: "a front-end coding challenge from frontendmentor!",
+    image: "/assets/images/todo.png",
     alt: "Shipping app",
-    link: "https://hrms-wine.vercel.app/",
+    link: "https://todoapp-react-teal.vercel.app/",
   },
   {
     title: "Attendance Logging App",

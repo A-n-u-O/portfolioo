@@ -15,17 +15,57 @@
 }
 
 a:hover {
-  color: #FFD700; /* Gold for hover effects */
+  color: #ffd700; /* Gold for hover effects */
 }
 
 /* Buttons */
 button {
-  background-color: #FFAF7B;
+  background-color: transparent;
   color: white;
   border: none;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #D76D77; /* Secondary color for hover */
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar ul li {
+  margin-right: 20px; /* Adjust as needed */
+}
+
+.navbar ul li:last-child {
+  margin-right: 0;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .navbar ul {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: white;
+    text-align: center;
+    display: none;
+  }
+
+  .navbar ul.block {
+    display: block;
+  }
+
+  .navbar ul li {
+    padding: 10px 0;
+  }
+
+  .navbar ul li a {
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+    color: #3a1c71;
+  }
+
+  .navbar ul li a:hover {
+    color: #d76d77;
+  }
 }
