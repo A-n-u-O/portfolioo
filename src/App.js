@@ -6,7 +6,7 @@ import Contact from "./Components/Contact";
 import About from "./Components/About";
 import Project from "./Components/Project";
 import Skills from "./Components/Skills";
-
+import resume from "./Assets/Anu-dev.pdf";
 const menuItems = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
@@ -15,12 +15,14 @@ const menuItems = [
 ];
 
 const projects = [
-  {title: "Auth App with React + Node.js + PostgreSQL",
+  {
+    title: "Auth App with React + Node.js + PostgreSQL",
     description:
       "A full-stack authentication system with login, registration, and protected dashboard.",
     image: "/assets/images/auth-app.png",
     alt: "Auth app",
-    link: "https://github.com/A-n-u-O/Authentication-with-PERN-stack",},
+    link: "https://github.com/A-n-u-O/Authentication-with-PERN-stack",
+  },
   {
     title: "Social App Project",
     description:
@@ -69,7 +71,6 @@ const projects = [
     alt: "Portfolio Project",
     link: "https://a-n-u-o-github-io.vercel.app/",
   },
-
 ];
 
 const socialIcons = [
@@ -152,7 +153,7 @@ function App() {
       </section>
 
       {/* Sections */}
-      <About />
+      <About resume={resume} />
       <Skills />
       <Project projects={projects} />
       <Contact />
