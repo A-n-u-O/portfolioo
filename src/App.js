@@ -15,6 +15,12 @@ const menuItems = [
 ];
 
 const projects = [
+  {title: "Auth App with React + Node.js + PostgreSQL",
+    description:
+      "A full-stack authentication system with login, registration, and protected dashboard.",
+    image: "/assets/images/auth-app.png",
+    alt: "Auth app",
+    link: "https://github.com/A-n-u-O/Authentication-with-PERN-stack",},
   {
     title: "Social App Project",
     description:
@@ -63,6 +69,7 @@ const projects = [
     alt: "Portfolio Project",
     link: "https://a-n-u-o-github-io.vercel.app/",
   },
+
 ];
 
 const socialIcons = [
