@@ -5,13 +5,17 @@ import { motion } from "framer-motion";
 
 const Skills = () => {
   const skills = [
+    { name: "Node JS", icon: "/assets/icons/Node.js.svg" },
+    { name: "Typescript", icon: "/assets/icons/typescript.svg" },
+    { name: "React", icon: "/assets/icons/react-svgrepo-com.svg" },
+    { name: "Git", icon: "/assets/icons/git.svg" },
     { name: "HTML", icon: "/assets/icons/html-5-svgrepo-com.svg" },
     { name: "CSS", icon: "/assets/icons/css-3-svgrepo-com.svg" },
     { name: "JavaScript", icon: "/assets/icons/javascript-svgrepo-com.svg" },
-    { name: "React", icon: "/assets/icons/react-svgrepo-com.svg" },
-    { name: "Tailwind CSS", icon: "/assets/icons/tailwindcss-icon-svgrepo-com.svg" },
-    { name: "Git", icon: "/assets/icons/git.svg" },
-    { name: "Typescript", icon: "/assets/icons/typescript.svg" },
+    {
+      name: "Tailwind CSS",
+      icon: "/assets/icons/tailwindcss-icon-svgrepo-com.svg",
+    },
   ];
 
   return (
@@ -23,7 +27,7 @@ const Skills = () => {
             <motion.div
               key={index}
               whileHover={{ scale: 1.1 }}
-              className="skill-card flex flex-col items-center p-5 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+              className="skill-card flex flex-col items-center p-8 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
               <img
                 src={skill.icon}
                 alt={skill.name}

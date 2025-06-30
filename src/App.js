@@ -16,6 +16,14 @@ const menuItems = [
 
 const projects = [
   {
+    title: "An Expense Tracker Dashboard",
+    description:
+      "A responsive financial dashboard built with Next.js, Zustand, Tailwind CSS, and Chart.js. It allows users to track income and expenses, view real-time summaries, and visualize their spending by category using dynamic charts. Built with clean state management and modern UI design principles, the project demonstrates component-based architecture and frontend performance best practices.",
+    image: "/assets/images/expense.png",
+    alt: "Expense Tracker Dashboard app",
+    link: "https://expense-tracker-dashboard-brown.vercel.app/",
+  },
+  {
     title: "Auth App with React + Node.js + PostgreSQL",
     description:
       "A full-stack authentication system with login, registration, and protected dashboard.",
