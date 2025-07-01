@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import "../project.css";
 
@@ -36,10 +35,10 @@ const Project = ({ projects }) => {
                 alt={project.alt}
                 className="w-full h-40 object-cover rounded-md mb-3"
               />
-              <h3 className="text-lg font-bold text-gray-800">
+              <h3 className="text-lg font-bold text-cyan-500">
                 {project.title}
               </h3>
-              <p className="text-sm text-gray-700 mt-2">
+              <p className="text-md text-cyan-100 mt-2">
                 {project.description}
               </p>
             </motion.a>

@@ -6,7 +6,7 @@ import Contact from "./Components/Contact";
 import About from "./Components/About";
 import Project from "./Components/Project";
 import Skills from "./Components/Skills";
-import resume from "./Assets/Anu-dev.pdf";
+import resume from "./Assets/Anuoluwapo Victor - Resume.pdf";
 const menuItems = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
