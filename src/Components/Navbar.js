@@ -7,16 +7,16 @@ const Navbar = ({ logoSrc, menuItems, className }) => {
 
   return (
     <nav className={`navbar ${className}`}>
-      <div className="container mx-auto flex justify-between items-center p-3 relative">
+      <div className="container mx-auto flex justify-between items-center relative">
         {/* Logo */}
         <motion.div
-          animate={{ rotate: 360, scale: [0.5, 0.7, 1] }}
+          animate={{ rotate: 360, scale: [0.5, 0.6, 1] }}
           transition={{ duration: 3 }}
-          className="flex items-center">
+          className="flex align-self-start items-center">
           <img
             src={logoSrc}
             alt="Logo"
-            className="w-28 h-12 rounded-full border-2 border-yellow-600 shadow-md"
+            className="w-35 h-28 rounded-md border-3 border-cyan-600 shadow-md"
           />
         </motion.div>
 
@@ -42,7 +42,7 @@ const Navbar = ({ logoSrc, menuItems, className }) => {
               className="py-3 mx-3 md:py-0 w-full border-b md:border-none border-gray-300">
               <a
                 href={item.href}
-                className="text-gray-800 hover:text-yellow-600 transition-colors block px-6 md:px-4 py-2"
+                className="text-cyan-900 hover:text-cyan-600  text-3xl transition-colors block px-6 md:px-4 py-2"
                 onClick={() => setIsOpen(false)}>
                 {item.label}
               </a>

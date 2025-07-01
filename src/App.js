@@ -134,8 +134,8 @@ function App() {
       {/* Hero Section */}
       <section className="hero py-20 text-center">
         <div className="container mx-auto">
-          <h1 className="text-4xl font-bold text-white">ANUOLUWAPO</h1>
-          <p className="text-xl text-gray-200 mt-4">Front-end Developer</p>
+          <h1 className=" text-8xl font-bold text-cyan-950">ANUOLUWAPO VICTOR</h1>
+          <p className="text-6xl text-cyan-200 mt-4">Front-end Developer</p>
           <motion.div className="mt-4">
             {socialIcons.map((icon, index) => (
               <a
@@ -146,11 +146,11 @@ function App() {
                 aria-label={`Visit my ${icon.alt}`}>
                 <motion.button
                   whileHover={{ scale: 1.2 }}
-                  className="mx-2 rounded-xl p-4">
+                  className="mx-2 my-4 rounded-xl p-4">
                   <img
                     src={icon.src}
                     alt={icon.alt}
-                    className="w-8 h-8"
+                    className=" w-20 "
                     loading="lazy"
                   />
                 </motion.button>

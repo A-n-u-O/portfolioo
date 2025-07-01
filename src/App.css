@@ -18,7 +18,7 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 5px;
+  height: 7px;
   background-color: #ffd700; /* Gold color */
   transform-origin: left center;
   transform: scaleX(0); /* Initially hidden */
@@ -26,7 +26,7 @@ body {
 }
 
 .hero {
-  min-height: 100vh; /* Full screen height */
+  min-height: 92vh; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -62,7 +62,7 @@ body {
 .hero .container {
   width: 100%;
   max-width: 1200px;
-  padding: 0 20px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 

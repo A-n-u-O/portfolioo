@@ -22,7 +22,7 @@ const Skills = () => {
   return (
     <section id="skills" className="skills py-20 px-20 text-center">
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900 mb-10">My Skills</h2>
+        <h2 className="text-5xl font-bold text-cyan-900 mb-10">My Skills</h2>
         <div className="flex flex-wrap justify-center gap-x-8 gap-y-6 mx-auto max-w-7xl">
           {skills?.map((skill, index) => (
             <motion.div
@@ -32,9 +32,9 @@ const Skills = () => {
               <img
                 src={skill.icon}
                 alt={skill.name}
-                className="w-16 h-16 mb-4"
+                className="w-20 h-20 mb-4"
               />
-              <p className="text-lg font-medium text-gray-800">{skill.name}</p>
+              <p className=" text-3xl text-cyan-700 font-medium">{skill.name}</p>
             </motion.div>
           ))}
         </div>
