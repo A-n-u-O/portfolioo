@@ -2,15 +2,18 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { animate } from "animejs";
+import { socialIcons } from "@/app/data/socials";
+// import { socialIcons } from "@/data/socials";
 
 export default function Hero() {
   const headingRef = useRef<HTMLHeadingElement>(null);
   const subTextRef = useRef<HTMLParagraphElement>(null);
   const buttonsRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
+  const iconsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!headingRef.current || !imageRef.current || !buttonsRef.current || !subTextRef.current)
+    if (!headingRef.current || !imageRef.current || !buttonsRef.current || !subTextRef.current || !iconsRef.current)
       return;
 
     animate(headingRef.current, {
@@ -29,58 +32,97 @@ export default function Hero() {
     });
 
     animate(imageRef.current, {
-      scale: [0.8, 1],
+      scale: [0.92, 1],
       opacity: [0, 1],
       easing: "easeOutExpo",
       delay: 400,
-      duration: 1200,
+      duration: 1000,
     });
 
-    animate([...buttonsRef.current.children], {
+    [...buttonsRef.current.children].forEach((child, index) => {
+      animate(child, {
+        opacity: [0, 1],
+        translateY: [10, 0],
+        easing: "easeOutExpo",
+        delay: 600 + index * 150,
+        duration: 600,
+      });
+    });
+
+    animate([...iconsRef.current.children], {
       opacity: [0, 1],
       translateY: [10, 0],
-      easing: "easeOutExpo",
-      delay: 600,
+      delay: 800,
       duration: 800,
-      delayEach: 150, // Only works with some versions. Use stagger alternatives if needed.
+      easing: "easeOutExpo",
     });
   }, []);
 
   return (
-    <section className="min-h-[90vh] flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-16 py-20">
-      <div className="flex-1 text-center md:text-left">
-        <h1 ref={headingRef} className="text-4xl md:text-6xl font-bold mb-4">
-          Hi, I&apos;m Anuoluwapo
-        </h1>
-        <p ref={subTextRef} className="text-lg text-gray-400 mb-6">
-          Frontend Developer who builds clean, interactive web experiences.
-        </p>
-        <div ref={buttonsRef} className="flex gap-4 justify-center md:justify-start">
-          <a
-            href="#projects"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition"
+    <section className="min-h-screen px-6 md:px-12 py-28 bg-[#0a0a0a] text-white">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        {/* Left Text Section */}
+        <div className="text-center md:text-left space-y-6">
+          <h1
+            ref={headingRef}
+            className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight"
           >
-            View Projects
-          </a>
-          <a
-            href="/files/Anu_Resume.pdf"
-            download
-            className="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-black transition"
+            Hi, I&apos;m Anuoluwapo
+          </h1>
+          <p
+            ref={subTextRef}
+            className="text-lg md:text-xl text-gray-400 max-w-xl mx-auto md:mx-0"
           >
-            Download Resume
-          </a>
-        </div>
-      </div>
+            Frontend Developer passionate about building clean, performant, and interactive user interfaces.
+          </p>
+          <div
+            ref={buttonsRef}
+            className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+          >
+            <a
+              href="#projects"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition"
+            >
+              View Projects
+            </a>
+            <a
+              href="/files/Anu_Resume.pdf"
+              download
+              className="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-black transition"
+            >
+              Download Resume
+            </a>
+          </div>
 
-      <div className="flex-1 flex justify-center mb-10 md:mb-0">
-        <Image
-          ref={imageRef}
-          src="/assets/images/hero-avatar.png"
-          alt="Anu Avatar"
-          width={350}
-          height={350}
-          className="rounded-full"
-        />
+          <div
+            ref={iconsRef}
+            className="flex gap-4 mt-6 justify-center md:justify-start"
+          >
+            {socialIcons.map((icon, idx) => (
+              <a
+                key={idx}
+                href={icon.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:scale-110 transition"
+              >
+                <img src={icon.src} alt={icon.alt} className="w-6 h-6" />
+              </a>
+            ))}
+          </div>
+        </div>
+
+        {/* Right Avatar Section */}
+        <div className="flex justify-center">
+          <Image
+            ref={imageRef}
+            src="/assets/images/hero-avatar.png"
+            alt="Anu Avatar"
+            width={380}
+            height={380}
+            className="rounded-full border border-gray-700"
+          />
+        </div>
       </div>
     </section>
   );
