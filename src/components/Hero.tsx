@@ -70,12 +70,12 @@ export default function Hero() {
         <div className="text-center md:text-left space-y-6">
           <h1
             ref={headingRef}
-            className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
+            className="text-6xl md:text-6xl font-extrabold leading-tight tracking-tight">
             Hi, I&apos;m Anuoluwapo
           </h1>
           <p
             ref={subTextRef}
-            className="text-lg md:text-xl text-gray-400 max-w-xl mx-auto md:mx-0">
+            className="text-lg md:text-2xl text-gray-400 max-w-xl mx-auto md:mx-0">
             Frontend Developer passionate about building clean, performant, and
             interactive user interfaces.
           </p>
@@ -84,13 +84,13 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <a
               href="#projects"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition">
+              className="bg-blue-600 hover:bg-blue-700 text-white text-xl px-6 py-3 rounded-lg transition">
               View Projects
             </a>
             <a
               href="/files/Anu_Resume.pdf"
               download
-              className="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-black transition">
+              className="border text-xl border-white px-6 py-3 rounded-lg hover:bg-white hover:text-black transition">
               Download Resume
             </a>
           </div>
@@ -108,8 +108,8 @@ export default function Hero() {
                 <Image
                   src={icon.src}
                   alt={icon.alt}
-                  width={24}
-                  height={24}
+                  width={28}
+                  height={28}
                   className="w-6 h-6"
                 />
               </a>
@@ -123,8 +123,8 @@ export default function Hero() {
             ref={imageRef}
             src="/assets/images/hero-avatar.png"
             alt="Anu Avatar"
-            width={380}
-            height={380}
+            width={400}
+            height={400}
             className="rounded-full border border-gray-700"
           />
         </div>
