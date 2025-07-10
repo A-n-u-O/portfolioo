@@ -1,5 +1,7 @@
+import { SocialIcon } from "@/types/dataTypes";
+
 // data/socials.ts
-export const socialIcons = [
+export const socialIcons: SocialIcon[] = [
   {
     src: "/assets/icons/icons8-github.svg",
     alt: "GitHub icon",
