@@ -29,7 +29,7 @@ export default function About() {
         <div className="space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold mb-2">About Me</h2>
           <p className="text-lg text-gray-400">
-            I’m Anuoluwapo, a frontend developer with a passion for crafting clean and
+            I&apos;m Anuoluwapo, a frontend developer with a passion for crafting clean and
             performant user interfaces. I enjoy turning complex problems into intuitive
             and delightful user experiences using modern web technologies.
           </p>
