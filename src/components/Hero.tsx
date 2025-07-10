@@ -3,7 +3,6 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { animate } from "animejs";
 import { socialIcons } from "@/app/data/socials";
-// import { socialIcons } from "@/data/socials";
 
 export default function Hero() {
   const headingRef = useRef<HTMLHeadingElement>(null);
@@ -106,7 +105,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="hover:scale-110 transition"
               >
-                <img src={icon.src} alt={icon.alt} className="w-6 h-6" />
+                <Image src={icon.src} alt={icon.alt} className="w-6 h-6" />
               </a>
             ))}
           </div>
