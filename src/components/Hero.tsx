@@ -28,7 +28,7 @@ export default function Hero() {
       </div>
       <div className="flex-1 flex justify-center mb-10 md:mb-0">
         <Image
-          src="/images/hero-avatar.svg"
+          src="/assets/images/hero-avatar.png"
           alt="Anu Avatar"
           width={350}
           height={350}
