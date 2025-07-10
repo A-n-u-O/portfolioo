@@ -2,6 +2,14 @@ import { Project } from "@/types/dataTypes";
 
 export const projects: Project[] = [
   {
+  title: "Mini-Commerce",
+  description: "Next.js e-commerce prototype with persistent cart, TypeScript validation, and SEO optimization. Features product browsing, checkout flow, and responsive design.",
+  image: "/assets/images/mini-commerce.png",
+  alt: "Mini-Commerce product page screenshot",
+  link: "https://mini-commerce.vercel.app/",
+  tech: ["Next.js", "TypeScript", "Zustand", "Tailwind CSS"],
+},
+  {
     title: "An Expense Tracker Dashboard",
     description:
       "A responsive financial dashboard built with Next.js, Zustand, Tailwind CSS, and Chart.js. It allows users to track income and expenses, view real-time summaries, and visualize their spending by category using dynamic charts.",
