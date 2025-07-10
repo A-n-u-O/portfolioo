@@ -12,7 +12,13 @@ export default function Hero() {
   const iconsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!headingRef.current || !imageRef.current || !buttonsRef.current || !subTextRef.current || !iconsRef.current)
+    if (
+      !headingRef.current ||
+      !imageRef.current ||
+      !buttonsRef.current ||
+      !subTextRef.current ||
+      !iconsRef.current
+    )
       return;
 
     animate(headingRef.current, {
@@ -64,48 +70,48 @@ export default function Hero() {
         <div className="text-center md:text-left space-y-6">
           <h1
             ref={headingRef}
-            className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight"
-          >
+            className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
             Hi, I&apos;m Anuoluwapo
           </h1>
           <p
             ref={subTextRef}
-            className="text-lg md:text-xl text-gray-400 max-w-xl mx-auto md:mx-0"
-          >
-            Frontend Developer passionate about building clean, performant, and interactive user interfaces.
+            className="text-lg md:text-xl text-gray-400 max-w-xl mx-auto md:mx-0">
+            Frontend Developer passionate about building clean, performant, and
+            interactive user interfaces.
           </p>
           <div
             ref={buttonsRef}
-            className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
-          >
+            className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <a
               href="#projects"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition"
-            >
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition">
               View Projects
             </a>
             <a
               href="/files/Anu_Resume.pdf"
               download
-              className="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-black transition"
-            >
+              className="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-black transition">
               Download Resume
             </a>
           </div>
 
           <div
             ref={iconsRef}
-            className="flex gap-4 mt-6 justify-center md:justify-start"
-          >
+            className="flex gap-4 mt-6 justify-center md:justify-start">
             {socialIcons.map((icon, idx) => (
               <a
                 key={idx}
                 href={icon.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:scale-110 transition"
-              >
-                <Image src={icon.src} alt={icon.alt} className="w-6 h-6" />
+                className="hover:scale-110 transition">
+                <Image
+                  src={icon.src}
+                  alt={icon.alt}
+                  width={24}
+                  height={24}
+                  className="w-6 h-6"
+                />
               </a>
             ))}
           </div>
