@@ -1,9 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Remove output: 'export' for development
-  // Only use it for static builds
-  ...(process.env.NODE_ENV === 'production' && {
+  // Only use static export for manual builds, not for Vercel
+  ...(process.env.BUILD_STATIC === 'true' && {
     output: 'export',
     distDir: 'out',
     trailingSlash: true,
@@ -12,12 +11,10 @@ const nextConfig: NextConfig = {
     }
   }),
   
-  // For development, use standard config
-  ...(process.env.NODE_ENV === 'development' && {
-    images: {
-      unoptimized: true // Optional: if you want consistent image handling
-    }
-  })
+  // Default config for Vercel and development
+  images: {
+    unoptimized: true
+  }
 };
 
 export default nextConfig;
