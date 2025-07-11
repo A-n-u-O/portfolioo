@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build": "next build && next export",
+    "prebuild": "if exist out rmdir /s /q out"
   },
   "dependencies": {
     "animejs": "^4.0.2",
