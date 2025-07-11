@@ -1,5 +1,7 @@
 {
   "version": 2,
+  "buildCommand": "npm run build:static",
+  "outputDirectory": "out",
   "build": {
     "env": {
       "NEXT_PUBLIC_VERCEL_ENV": "production"
