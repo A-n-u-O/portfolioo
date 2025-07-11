@@ -7,7 +7,7 @@
     "start": "next start",
     "lint": "next lint",
     "build": "next build && next export",
-    "prebuild": "if exist out rmdir /s /q out"
+    "prebuild": "rm -rf out .next"
   },
   "dependencies": {
     "animejs": "^4.0.2",
