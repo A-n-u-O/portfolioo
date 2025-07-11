@@ -64,18 +64,18 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="min-h-screen px-6 md:px-12 py-28 bg-[#0a0a0a] text-white">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <section className="min-h-screen px-6 md:px-12 py-30 my-80 bg-[#0a0a0a] text-white">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* Left Text Section */}
         <div className="text-center md:text-left space-y-6">
           <h1
             ref={headingRef}
-            className="text-6xl md:text-6xl font-extrabold leading-tight tracking-tight">
-            Hi, I&apos;m Anuoluwapo
+            className="text-5xl lg:text-7xl font-extrabold leading-tight tracking-tight">
+            Anuoluwapo Victor
           </h1>
           <p
             ref={subTextRef}
-            className="text-lg md:text-2xl text-gray-400 max-w-xl mx-auto md:mx-0">
+            className="text-xl md:text-4xl text-gray-400 mx-auto md:mx-0">
             Frontend Developer passionate about building clean, performant, and
             interactive user interfaces.
           </p>
